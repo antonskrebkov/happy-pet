@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Главная"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html',{})
+    <main class="page page__home">
+      <section class="page__main-block main-block">
+        <div class="main-block__container">
+          <div class="main-block__item item-main-block">
+            <h2 class="item-main-block__title">Твой новый друг
+              с доставкой на дом
+            </h2>
+            <div class="item-main-block__text">Онлайн-магазин домашних животных подарит тебе нового друга в несколько
+              кликов. Действуй!</div>
+            <a href="" class="item-main-block__button">Посмотреть друзей</a>
+          </div>
+          <div class="main-block__img">
+            <img src="./img/pets.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="page__slider slider-page">
+        <div class="slider-page__container">
+          <div class="slider-page__button-prev"></div>
+          <div class="slider-page__swiper swiper">
+            <div class="slider-page__wrapper swiper-wrapper">
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_monkey">Обезьяны</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/01.png" alt="">
+                </div>
+              </a>
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_reptile">Рептилии</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/02.png" alt="">
+                </div>
+              </a>
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_rodent">Грызуны</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/03.png" alt="">
+                </div>
+              </a>
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_cat">Кошки</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/04.png" alt="">
+                </div>
+              </a>
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_dog">Собаки</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/05.png" alt="">
+                </div>
+              </a>
+              <a href="" class="slider-page__item item-slider-page swiper-slide">
+                <div class="item-slider-page__category item-slider-page__category_parrot">Папугаи</div>
+                <div class="item-slider-page__img">
+                  <img src="./img/slider-categories/06.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div class="slider-page__scrollbar-box">
+              <div class="slider-page__scrollbar swiper-scrollbar"></div>
+            </div>
+          </div>
+          <div class="slider-page__button-next"></div>
+        </div>
+      </section>
+      <section class="page__choise choise">
+        <div class="choise__container">
+          <h2 class="choise__title">Почему выбирают наших друзей</h2>
+          <div class="choise__items">
+            <div class="choise__item item-choise">
+              <img class="item-choise__img" src="./img/icons/main-icons/01.svg" alt="">
+              <div class="item-choise__body">
+                <div class="item-choise__title">Их много</div>
+                <div class="item-choise__text">Огромный выбор животных, птиц и питомцев</div>
+              </div>
+            </div>
+            <div class="choise__item item-choise">
+              <img class="item-choise__img" src="./img/icons/main-icons/02.svg" alt="">
+              <div class="item-choise__body">
+                <div class="item-choise__title">Они здоровы</div>
+                <div class="item-choise__text">Мы заботимся о каждом питомце, который с нами</div>
+              </div>
+            </div>
+            <div class="choise__item item-choise">
+              <img class="item-choise__img" src="./img/icons/main-icons/03.svg" alt="">
+              <div class="item-choise__body">
+                <div class="item-choise__title">Их любят</div>
+                <div class="item-choise__text">Мы окружаем любовью и вниманием наших друзей</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__catalog catalog">
+        <div class="catalog__container">
+          <h2 class="catalog__title">Каталог животных</h2>
+          <div class="catalog__tabs">
+            <button class="catalog__tab_all" data-filter="all">Все</button>
+            <button class="catalog__tab" data-filter=".dog">Собаки</button>
+            <button class="catalog__tab" data-filter=".cat">Кошки</button>
+            <button class="catalog__tab" data-filter=".parrot">Попугаи</button>
+            <button class="catalog__tab" data-filter=".rodent">Грызуны</button>
+            <button class="catalog__tab" data-filter=".monkey">Обезьяны</button>
+            <button class="catalog__tab" data-filter=".reptile">Рептилии</button>
+          </div>
+          <div class="catalog__slider">
+            <div class="catalog__swiper swiper">
+              <div class="catalog__wrapper swiper-wrapper">
+                <a href="" class="catalog__item item-catalog swiper-slide mix parrot">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">2</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">0</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/01.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Попугай Гриша</div>
+                        <div class="item-info__text">Попугай-говорун отличный новый друг для всей семьи</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Попугай</div>
+                          <div class="tags-item-info__kind">Птица</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">1900</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix dog">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">4</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">2</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/02.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Доберман Василий</div>
+                        <div class="item-info__text">Отличный новый друг для всей семьи, охраняет и обожает</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Собака</div>
+                          <div class="tags-item-info__kind">Хищник</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">5900</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix cat">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">7</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">3</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/03.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Вислоухая кошка Кира</div>
+                        <div class="item-info__text">Прекрасная подруга на дождливые холодные времена</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Кошка</div>
+                          <div class="tags-item-info__kind">Мышкоедная</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">7200</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix monkey">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">7</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">3</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/04.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Шимпанзе Роза</div>
+                        <div class="item-info__text">Домашний питомец для тех, кому не хочется скучать</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Обезьяна</div>
+                          <div class="tags-item-info__kind">Травоядная</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">32500</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix reptile">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">12</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">0</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/05.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Черепаха Нина</div>
+                        <div class="item-info__text">Домашний питомец для тех, кто постоянно не дома</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Черепаха</div>
+                          <div class="tags-item-info__kind">Травоядная</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">500</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix cat">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">4</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">4</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/06.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Кот девон-рекс Чичи</div>
+                        <div class="item-info__text">Дружелюбный кот Чичи любит ластиться и гулять на улице </div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Кот</div>
+                          <div class="tags-item-info__kind">Хищник</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">10500</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+                <a href="" class="catalog__item item-catalog swiper-slide mix rodent">
+                  <div class="item-catalog__wrapper">
+                    <div class="item-catalog__header header-catalog-item">
+                      <div class="header-catalog-item__tags tags-item">
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">3</div>
+                          <div class="tags-item__text">месяцев</div>
+                        </div>
+                        <div class="tags-item__badge">
+                          <div class="tags-item__value">0</div>
+                          <div class="tags-item__text">награды</div>
+                        </div>
+                      </div>
+                      <div class="header-catalog-item__wc header-catalog-item__wc_red"><img
+                          src="./img/icons/main-icons/wc.svg" alt=""></div>
+                    </div>
+                    <div class="item-catalog__body body-catalog-item">
+                      <img src="./img/pets/07.png" alt="" class="body-catalog-item__img">
+                      <div class="body-catalog-item__info item-info">
+                        <div class="item-info__title">Кролик Сниф</div>
+                        <div class="item-info__text">Кролик Сниф влюбит всех своими ушами</div>
+                        <div class="item-info__tags tags-item-info">
+                          <div class="tags-item-info__animal">Грызун</div>
+                          <div class="tags-item-info__kind">Травоядный</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-catalog__footer footer-catalog-item">
+                    <div class="footer-catalog-item__price">900</div>
+                    <div class="footer-catalog-item__badge"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog__pagination pagination-catalog">
+                <div class="pagination-catalog__items"></div>
+              </div>
+            </div>
+            <div class="catalog__button-prev"></div>
+            <div class="catalog__button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="page__gallery gallery">
+        <div class="gallery__container">
+          <div class="gallery__title">Мы любим поиграть</div>
+          <div class="gallery__columns">
+            <div class="gallery__column">
+              <a href="./img/gallery/01.jpg" class="gallery__img gallery__img_s" data-fancybox="gallery">
+                <img src="./img/gallery/01.jpg" alt="">
+              </a>
+              <a href="./img/gallery/02.jpg" class="gallery__img gallery__img_l" data-fancybox="gallery">
+                <img src="./img/gallery/02.jpg" alt="">
+              </a>
+            </div>
+            <div class="gallery__column">
+              <a href="./img/gallery/03.jpg" class="gallery__img gallery__img_l" data-fancybox="gallery">
+                <img src="./img/gallery/03.jpg" alt="">
+              </a>
+              <a href="./img/gallery/04.jpg" class="gallery__img gallery__img_s" data-fancybox="gallery">
+                <img src="./img/gallery/04.jpg" alt="">
+              </a>
+            </div>
+            <div class="gallery__column">
+              <a href="./img/gallery/05.jpg" class="gallery__img gallery__img_m" data-fancybox="gallery">
+                <img src="./img/gallery/05.jpg" alt="">
+              </a>
+              <a href="./img/gallery/06.jpg" class="gallery__img gallery__img_m" data-fancybox="gallery">
+                <img src="./img/gallery/06.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__about about">
+        <div class="about__container">
+          <h2 class="about__title">О питомнике Happy Pet</h2>
+          <div class="about__body">
+            <div class="about__description description-about">
+              <h3 class="description-about__title">Мы - команда мечтателей</h3>
+              <div class="description-about__text">
+                <p>Частный приют для животных «Happy pet» был основан в 2014 году в селе Фасовая, Макаровского района,
+                  Киевской области на базе общественной организации «Зооцентр «Ковчег» Оноприенко Галиной Федоровной и
+                  построен за ее собственные средства. Галина Федоровна является владельцем приюта и его директором.
+                </p>
+                <p>
+                  На данный момент в приюте проживают около 1000 животных: собаки, коты, обезьяны, грызуны, попугаи и
+                  рептилии. Их количество постепенно увеличивается.
+                </p>
+              </div>
+              <a href="" class="description-about__link">Читать больше</a>
+            </div>
+            <div class="about__img">
+              <img src="./img/about.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__questions questions">
+        <div class="questions__container">
+          <h2 class="questions__title">Есть вопросы? Задавайте!</h2>
+          <form action="#" class="questions__form form-questions">
+            <div class="form-questions__column">
+              <div class="form-questions__row">
+                <div class="form-questions__wrapper">
+                  <input type="text" class="form-questions__input required" placeholder="Введите имя *">
+                  <span class="form-questions__line"></span>
+                </div>
+                <div class="form-questions__wrapper">
+                  <input type="text" class="form-questions__input required email" placeholder="Введите E-mail *">
+                  <span class="form-questions__line"></span>
+                </div>
+              </div>
+              <div class="form-questions__row">
+                <div class="form-questions__wrapper">
+                  <input type="tel" class="form-questions__input required phone" placeholder="Введите телефон *">
+                  <span class="form-questions__line"></span>
+                </div>
+                <div class="form-questions__wrapper">
+                  <div class="form-questions__select">
+                    <select>
+                      <option value="0" selected="selected">Тема вопроса</option>
+                      <option value="1">Тема 1</option>
+                      <option value="2">Тема 2</option>
+                      <option value="3">Тема 3</option>
+                      <option value="4">Тема 4</option>
+                    </select>
+                    <span class="form-questions__line"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-questions__row">
+                <div class="form-questions__wrapper form-questions__wrapper_textarea">
+                  <textarea name="" id="" class="form-questions__message" placeholder="Введите сообщение"></textarea>
+                  <span class="form-questions__line"></span>
+                </div>
+              </div>
+              <div class="form-questions__row form-questions__row_cb">
+                <label for="formPersonalData" class="form-questions__checkbox">
+                  <input id="formPersonalData" type="checkbox" class="required"><span>Я согласен на обработку
+                    моих персональных
+                    данных</span>
+                </label>
+                <label for="formPrivacyPolicy" class="form-questions__checkbox">
+                  <input checked id="formPrivacyPolicy" type="checkbox" class="required"><span>Я согласен с <a
+                      href="">Политикой
+                      конфиденциальности</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form-questions__column">
+              <button type="submit" class="form-questions__button"></button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html',{})
+  </div>
+
+  </div>
+  <div class="loader">
+    <div class="loader__content"></div>
+  </div>
+  <div class="validation-popup">
+    <div class="validation-popup__wrapper">
+      <div class="validation-popup__title">Данные были введены неправильно:</div>
+      <div class="validation-popup__body">
+      </div>
+      <button class="validation-popup__btn">
+        <img src="./img/icons/main-icons/close.svg" alt="">
+      </button>
+    </div>
+  </div>
+  <script src="js/app.min.js">
+  </script>
+</body>
+
+</html>

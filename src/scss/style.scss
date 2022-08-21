@@ -1,0 +1,310 @@
+@use "sass:math";
+
+// Импорт миксинов
+@import "mixins";
+@import "swiper";
+@import "select";
+@import "scrollbar";
+@import "pagination";
+@import "fancybox";
+// @import "navigation";
+
+//<FONTS>======================================================================
+
+// Подключаем шрифты ===========================================================
+//&display=swap - добавить при подключении через гуглфонтс (F1 + добавить шрифты)
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900&display=swap');
+
+// @import "fonts/fonts"; - подключить при локальных файлах шрифтов
+// /Подключаем шрифты ==========================================================
+
+// Иконочные шрифты ============================================================
+//@import "icons";
+// /Иконочные шрифты ===========================================================
+
+// Шрифт по умолчанию ==========================================================
+$fontFamily: "Montserrat";
+$fontSize: rem(16); // 16px размер шрифта по умолчанию из макета
+// /Шрифт по умолчанию =========================================================
+
+//</FONTS>=====================================================================
+
+//<SETTINGS>==================================================================
+// Основные цвета
+$mainColor: #000;
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (Макета)
+$maxWidth: 1920;
+// Ширина ограничевающего контейнера (0 - нет ограничения)
+$maxWidthContainer: 1170;
+// Общий отступ у контейнера
+// (30 = по 15 слева и справа, 0 - нет отступа)
+$containerPadding: 30;
+
+// Тип адаптива:
+// 1 - отзывчивость (у контейнера нет брейкпоинтов)
+// 2 - по брейк-поинтам (контейнер меняет свою ширину по брейкпоинтам)
+$responsiveType: 1;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+//Брейкпоинты
+$pc: em($containerWidth); // PC, laptop, some tablets in horizontal position
+$tablet: em(991.98); // Tablets, some phones in horizontal position
+$mobile: em(767.98); // Phones L
+$mobileSmall: em(479.98); // Phones S
+
+// Обнуление, общие параметры ==================================================
+@import "null";
+
+body {
+  height: 100%;
+  color: $mainColor;
+  font-size: $fontSize;
+  font-weight: 500;
+  font-family: $fontFamily;
+
+  // Скролл заблокирован
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &.sending {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/icons/main-icons/loader.svg") center / 100px no-repeat;
+  }
+}
+
+.validation-popup {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 500px;
+    height: auto;
+    max-height: 280px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px 15px 30px;
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+
+    @media (max-width: 529px) {
+      width: 290px;
+      padding: 30px 10px 15px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    @media (max-width: 529px) {
+      font-size: 16px;
+    }
+  }
+
+  &__body {
+    margin-top: 30px;
+    height: auto;
+    max-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    @media (max-width: 529px) {
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: #f52456;
+
+      @media (max-width: 529px) {
+        position: relative;
+        font-size: 14px;
+
+      }
+
+    }
+
+    p+p {
+      @media (max-width: 529px) {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    width: 20px;
+    height: 20px;
+
+    @media (max-width: 529px) {
+      width: 13px;
+      height: 13px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+
+// Оболочка ====================================================================
+.wrapper {
+  // width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  // Сайт загружен
+  .loaded & {}
+
+  // Прижимаем footer
+  >main {
+    flex: 1 1 auto;
+  }
+
+  // Фикс для слайдеров
+  >* {
+    min-width: 0;
+  }
+}
+
+// Ограничивающий контейнер =====================================================
+
+/*
+Стили будут применяться ко всем классам содержащим *__container
+Например header__container, main__container и тд
+Снипет (HTML): cnt
+*/
+
+@if ($responsiveType==1) {
+
+  // Отзывчивая
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+}
+
+@else {
+
+  // По брейкпоинтам
+  [class*="__container"] {
+    margin: 0 auto;
+
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+    }
+
+    @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+//</SETTINGS>=================================================================
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов
+@import "tippy";
+
+
+// Подключение стилей общих элементов проекта
+// @import "common";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "home";
+@import "friends";

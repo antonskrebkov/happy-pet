@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Друзья"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html',{})
+    <main class="friends">
+      <section class="friends__breadcrumbs breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item active"><a href="" class="breadcrumbs__link">Друзья</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="friends__choose-friend choose-friend">
+        <div class="choose-friend__container">
+          <h1 class="choose-friend__title">Выбрать друга</h1>
+          <div class="choose-friend__quantity">Количество животных: <span>0</span></div>
+        </div>
+      </section>
+      <section class="friends__filter filter">
+        <div class="filter__container">
+          <div class="filter__friend filter__pet">
+            <select>
+              <option value="0" selected="selected">Питомец</option>
+              <option value="1">Черепаха</option>
+              <option value="2">Кот</option>
+              <option value="3">Кролик</option>
+              <option value="4">Собака</option>
+              <option value="5">Шимпанзе</option>
+              <option value="6">Попугай</option>
+            </select>
+          </div>
+          <div class="filter__friend filter__gender">
+            <select>
+              <option value="0" selected="selected">Пол</option>
+              <option value="1">Мальчик</option>
+              <option value="2">Девочка</option>
+            </select>
+          </div>
+          <div class="filter__friend filter__age">
+            <select>
+              <option value="0" selected="selected">Возраст</option>
+              <option value="1"><span>
+                  < 12</span>месяцев</option>
+              <option value="2"><span>> 12</span>месяцев</option>
+            </select>
+          </div>
+          <div class="filter__friend filter__size">
+            <select>
+              <option value="0" selected="selected">Размер</option>
+              <option value="1">Маленький</option>
+              <option value="2">Средний</option>
+              <option value="3">Большой</option>
+            </select>
+          </div>
+          <div class="filter__friend filter__wc">
+            <select>
+              <option value="0" selected="selected">Туалет</option>
+              <option value="1">Приучен</option>
+              <option value="2">Не приучен</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="friends__sort sort">
+        <div class="sort__container">
+          <div class="sort__body">
+            <div class="sort__label">Сортировать</div>
+            <select class="sort__list">
+              <option value="0" selected="selected">по умолчанию</option>
+              <option value="1">по возрастанию цены</option>
+              <option value="2">по убыванию цены</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="friends__catalog catalog">
+        <div class="catalog__container">
+          <div class="catalog__items">
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">2</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">0</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/01.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Попугай Гриша</div>
+                    <div class="item-info__text">Попугай-говорун отличный новый друг для всей семьи</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Попугай</div>
+                      <div class="tags-item-info__kind">Птица</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">1900</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">4</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">2</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/02.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Доберман Василий</div>
+                    <div class="item-info__text">Отличный новый друг для всей семьи, охраняет и обожает</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Собака</div>
+                      <div class="tags-item-info__kind">Хищник</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">5900</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">7</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">3</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/03.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Вислоухая кошка Кира</div>
+                    <div class="item-info__text">Прекрасная подруга на дождливые холодные времена</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Кошка</div>
+                      <div class="tags-item-info__kind">Мышкоедная</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">7200</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">7</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">3</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/04.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Шимпанзе Роза</div>
+                    <div class="item-info__text">Домашний питомец для тех, кому не хочется скучать</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Обезьяна</div>
+                      <div class="tags-item-info__kind">Травоядная</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">32500</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">12</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">0</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/05.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Черепаха Нина</div>
+                    <div class="item-info__text">Домашний питомец для тех, кто постоянно не дома</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Черепаха</div>
+                      <div class="tags-item-info__kind">Травоядная</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">500</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">4</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">4</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_green"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/06.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Кот девон-рекс Чичи</div>
+                    <div class="item-info__text">Дружелюбный кот Чичи любит ластиться и гулять на улице </div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Кот</div>
+                      <div class="tags-item-info__kind">Хищник</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">10500</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+            <a href="" class="catalog__item item-catalog">
+              <div class="item-catalog__wrapper">
+                <div class="item-catalog__header header-catalog-item">
+                  <div class="header-catalog-item__tags tags-item">
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">3</div>
+                      <div class="tags-item__text">месяцев</div>
+                    </div>
+                    <div class="tags-item__badge">
+                      <div class="tags-item__value">0</div>
+                      <div class="tags-item__text">награды</div>
+                    </div>
+                  </div>
+                  <div class="header-catalog-item__wc header-catalog-item__wc_red"><img
+                      src="./img/icons/main-icons/wc.svg" alt=""></div>
+                </div>
+                <div class="item-catalog__body body-catalog-item">
+                  <img src="./img/pets/07.png" alt="" class="body-catalog-item__img">
+                  <div class="body-catalog-item__info item-info">
+                    <div class="item-info__title">Кролик Сниф</div>
+                    <div class="item-info__text">Кролик Сниф влюбит всех своими ушами</div>
+                    <div class="item-info__tags tags-item-info">
+                      <div class="tags-item-info__animal">Грызун</div>
+                      <div class="tags-item-info__kind">Травоядный</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-catalog__footer footer-catalog-item">
+                <div class="footer-catalog-item__price">900</div>
+                <button class="footer-catalog-item__add"><img src="./img/icons/header-icons/cart.svg" alt=""></button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html',{})
+  </div>
+
+  </div>
+  <div class="loader">
+    <div class="loader__content"></div>
+  </div>
+  <script src="js/app.min.js">
+  </script>
+</body>
+
+</html>

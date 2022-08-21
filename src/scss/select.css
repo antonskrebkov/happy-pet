@@ -1,0 +1,26 @@
+.select {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.select__title {
+  padding: 0;
+}
+
+.select__options {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 4px;
+  z-index: 99;
+}
+
+.select__option {
+  padding: 0;
+}
+
+.select._active.select__options {
+  display: block;
+}

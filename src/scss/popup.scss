@@ -1,0 +1,143 @@
+.modal {
+   position: fixed;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(#000, .8);
+   z-index: 50;
+   &.show {
+      display: flex;
+   }
+   &__content {
+      position: relative;
+      max-width: 500px;
+      width: 100%;
+      padding: 80px 80px 25px;
+      background-color: grey;
+      border-radius: 5px;
+
+      transform: translateY(-50px);
+      transition: transform 200ms ease-in-out, 
+                  opacity 200ms ease-in-out;
+
+
+      &--contact {
+         padding: 60px 0;
+      }
+      &--story {
+         padding: 0;
+         background: none;
+      }
+   }
+   &__close {
+      position: absolute;
+      border: none;
+      top: 20px;
+      right: 20px;
+      padding: 0;
+      background-color: transparent;
+      opacity: .5;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: opacity .2s linear;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   &__video {
+      display: block;
+      margin: 0 auto;
+   }
+}
+.form {
+   &--auth {
+      width: 280px;
+      margin: 0 auto;
+      text-align: center;
+   }
+   &__group {
+      margin-bottom: 1.5rem;
+      position: relative;
+      &--md {
+         margin-bottom: 2.5rem;
+      }
+   }
+   &__control {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #3F3F3F;
+      padding: 0 1px 7px;
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      &::placeholder {
+         font-family: inherit;
+         color: rgba(#fff, .2);
+      }
+      &:focus + .form__line {
+         animation: underlined .7s forwards;
+      }
+      &--textarea {
+         resize: none;
+         height: 23px;
+      }
+   }
+   &__line {
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: blue;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 0;
+      z-index: 1;
+   }
+   .btn {
+      width: auto;
+      padding: 8px 15px;
+      border-radius: 5px;
+      &--modal {
+         margin-bottom: 40px;
+      }
+   }
+   &__footer--modal {
+      line-height: 16px;
+      color: #B3B3B3;
+   }
+   &__footer-list {
+      display: flex;
+      justify-content: center;
+   }
+   &__footer-item {
+      margin: 0 5px;
+      a {
+         color: inherit;
+         text-decoration: none;
+         font-size: 12px;
+         line-height: 14px;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+@keyframes underlined {
+   from {
+      width: 0;
+   }
+   to {
+      width: 100%;
+   }
+}
